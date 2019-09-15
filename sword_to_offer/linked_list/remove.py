@@ -1,6 +1,6 @@
-from point_to_offer.linked_list.base import LinkNode
-from point_to_offer.linked_list.create import create
-from point_to_offer.linked_list.output import output
+from sword_to_offer.linked_list.base import LinkNode
+from sword_to_offer.linked_list.create import create
+from sword_to_offer.linked_list.output import output
 
 
 def remove(head, value):
