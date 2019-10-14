@@ -1,10 +1,14 @@
 {
     "configurations": [
         {
+            type: "python",
+        },
+        {
             "type": "java",
-            "name": "CodeLens (Launch) - QuickSort",
+            "name": "java debug",
             "request": "launch",
-            "mainClass": "QuickSort"
+            "mainClass": "${fileDirname}/"
         }
     ]
 }
+one","two","three","four"."five"."six"."seven"."eight"."nine"."ten
