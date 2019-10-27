@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""未完成
+"""
 
 
 class Stack(object):
@@ -34,10 +36,38 @@ class Stack(object):
         return self.cus_stack[-1]
 
     def is_pop_order(self, push_order, pop_order):
-
+        if not push_order or not pop_order:
+            return
+        result = True
+        push_order_index = 0
+        self.push(push_order[push_order_index])
+        push_order_index += 1
+        for i in range(len(pop_order)):
+            if self.top() != pop_order[i]:
+                #j = push_order_index + 1
+                #while j < len(push_order) and self.top() != pop_order[i]:
+                #    self.push(push_order[j])
+                #if j == len(push_order):
+                #    result = False
+                #    return result
+                #if self.top() == pop_order[i]:
+                #    push_order_index = j
+                #    self.pop()
+                for j in range(push_order_index + 1, len(push_order)):
+                    self.push(push_order[j])
+                    if self.top() == pop_order[i]:
+                        push_order_index = j - 1
+                        self.pop()
+                        break
+                    if j == len(push_order) - 1:
+                        result = False
+                        return result
+            else:
+                self.pop()
+        return result
 
 
 if __name__ == "__main__":
     s = Stack()
-    res = s.is_pop_order([1, 2, 3, 4, 5], [4, 3, 5, 2, 1])
+    res = s.is_pop_order([1, 2, 3, 4, 5], [4, 5, 3, 2, 1])
     print(res)
