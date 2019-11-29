@@ -7,7 +7,7 @@ import java.util.Queue;
 
 class Solution {
     /**
-     * bfs+动态规划
+     * bfs
      * @param n
      * @return
      */
