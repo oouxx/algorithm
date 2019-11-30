@@ -1,4 +1,4 @@
-class LRUCache<k, v> extend LinkedHashMap<k, v>{
+class LRUCache<k, v> extends LinkedHashMap<k, v>{
     private final int CACHE_SIZE;
         
     public LRUCache(int cacheSize) {
