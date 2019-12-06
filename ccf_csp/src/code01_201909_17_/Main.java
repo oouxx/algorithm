@@ -3,14 +3,14 @@ public class Main{
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         String firstLine = s.nextLine();
-        int N = (int)firstLine.split(" ")[0];
-        int M = (int)firstLine.split(" ")[1];
+        int N = Integer.valueOf(firstLine.split(" ")[0]);
+        int M = Integer.valueOf(firstLine.split(" ")[1]);
         int[][] fruitMatrix = new int[N][M];
         for(int i = 0; i < N + 1; i++){
-            String nextLine = s.nextLine().split(" ");
+            String nextLine = s.nextLine();
             for(int j = 0; j < M + 1; j++){
                 String[] splitedStr = nextLine.split(" ");
-                fruitMatrix[i][j] = (int)splitedStr[j];
+                fruitMatrix[i][j] = Integer.valueOf(splitedStr[j]);
             }
         }
         int K = 0; // 疏果最多的果树编号
