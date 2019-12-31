@@ -9,17 +9,17 @@ class Solution{
     }
     List<List<Integer>> res = new ArrayList<>();
     List<Integer> tempList = new ArrayList<>();
-    backTracking(res, tempList, 0, k, n);
+    backTracking(res, tempList, 1, k, n);
     return res;
   }
-  public void backTracking(List<List<Integer>> res, List<Integer> tempList, int length, int k, int n){
-    if(length == k){
+  public void backTracking(List<List<Integer>> res, List<Integer> tempList, int start, int k, int n){
+    if(k == 0){
       res.add(new ArrayList<>(tempList));
       return;
     }
-    for(int i = 1; i <= n; i++){
+    for(int i = start; i <= n - k + 1; i++){
       tempList.add(i);
-      backTracking(res, tempList, length + 1, k, n);
+      backTracking(res, tempList, i + 1, k - 1, n);
       tempList.remove(tempList.size() - 1);
     }
   }
