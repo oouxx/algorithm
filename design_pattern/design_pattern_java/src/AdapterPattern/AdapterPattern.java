@@ -1,19 +1,16 @@
-class Adapter extends Target{
-    private Adaptee adaptee;
-    public Adapater(Adaptee adaptee){
-        this.adaptee = adaptee;
-    }
-    public static void request(){
-        adaptee.specificRequest();
-    }
-}
-
+/**
+ * 对象适配器模式
+ * @author wxx
+ */
+// target
 interface ScoreOperation{
     public int[] sort(int[] array);
 
     public int search(int[] array, int key);
 }
-
+// adapter
+// 类适配器
+// class Adapter extends Adaptee implements Target
 class OperationAdapter implements ScoreOperation {
     private QuickSort quickSort;
     private BinarySearch binarySearch;
@@ -32,7 +29,7 @@ class OperationAdapter implements ScoreOperation {
     }
 
 }
-
+// adaptee
 class QuickSort{
     public int[] quickSort(int[] array){
         if(array == null || array.length == 0){
@@ -67,7 +64,7 @@ class QuickSort{
         a[j] = temp;
     }
 }
-
+//adaptee
 class BinarySearch{
     public int binarySearch(int[] array, int key){
         int low = 0;
@@ -84,5 +81,38 @@ class BinarySearch{
             }
         }
         return -1;
+    }
+}
+
+class Client{
+    public static void main(String[] args[]){
+        ScoreOperation operation;
+        operation = (ScoreOperation)XMLUtil.getBean();
+        int scores[] = {84, 76, 50, 69, 91 ,88, 96};
+        int result[];
+        int score;
+
+        System.out.println("成绩排序结果:");
+        result = operation.sort(scores);
+        for(int i: scores){
+            System.out.println(i + ",");
+        }
+        System.out.println();
+        System.out.println("查找成绩90:");
+        score = operation.search(result, 90);
+        if(score != -1){
+            System.out.println("找到成绩90");
+        }else{
+            System.out.println("没有找到成绩90");
+        }
+
+        System.out.println();
+        System.out.println("查找成绩92:");
+        score = operation.search(result, 92);
+        if(score != -1){
+            System.out.println("找到成绩92");
+        }else{
+            System.out.println("没有找到成绩92");
+        }
     }
 }
