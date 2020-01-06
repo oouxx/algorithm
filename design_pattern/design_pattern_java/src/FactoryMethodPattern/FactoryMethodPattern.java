@@ -2,7 +2,21 @@ package FactoryMethodPattern;
 
 interface LoggerFactory{
     public Logger generateLogger();
+
+    public Logger generateLogger(String strParam);
+
+    public Logger generateLogger(Object objParam);
 }
+// hide factory method
+// reduce client's works
+abstract class LoggerFactory{
+    public abstract Logger generateLogger();
+    public void writeLog(){
+        Logger logger = this.generateLogger();
+        logger.writeLog();
+    }
+}
+
 
 interface Logger{
     public void writeLog();
