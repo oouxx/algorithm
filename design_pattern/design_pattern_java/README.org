@@ -1,0 +1,26 @@
+| type               | name                            | difficulty | frequency |
+|--------------------+---------------------------------+------------+-----------|
+| Creational Pattern | Singleton Pattern               | *          | ****      |
+| Creational Pattern | Simple Factory Pattern          | **         | ***       |
+| Creational Pattern | Factory Method Pattern          | **         | *****     |
+| Creational Pattern | Abstract Factory Pattern        | ****       | *****     |
+| Creational Pattern | Prototype Pattern               | ***        | ***       |
+| Creational Pattern | Bulder Pattern                  | ****       | **        |
+| Structural Pattern | Adapter Pattern                 | **         | ****      |
+| Structural Pattern | Bridge Pattern                  | ***        | ***       |
+| Structural Pattern | Composite Pattern               | ***        | ****      |
+| Structural Pattern | Decorator Pattern               | ***        | ***       |
+| Structural Pattern | Facade Pattern                  | *          | *****     |
+| Structural Pattern | Proxy Pattern                   | ***        | ****      |
+| Structural Pattern | Flyweight Pattern               | ****       | *         |
+| Behavioral Pattern | Chain of Responsibility Pattern | ***        | **        |
+| Behavioral Pattern | Command Pattern                 | ***        | ****      |
+| Behavioral Pattern | Interpreter Pattern             | *****      | *         |
+| Behavioral Pattern | Iterator Pattern                | ***        | *****     |
+| Behavioral Pattern | Mediator Pattern                | ***        | **        |
+| Behavioral Pattern | Memonto Pattern                 | **         | **        |
+| Behavioral Pattern | Observer Pattern                | ***        | *****     |
+| Behavioral Pattern | State Pattern                   | ***        | ***       |
+| Behavioral Pattern | Strategy Pattern                | *          | ****      |
+| Behavioral Pattern | Template Method Pattern         | **         | ***       |
+| Behavioral Pattern | Visitor Pattern                 | ****       | *         |
