@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"wxx.com/go-leetcode/bagproblem"
+	bagproblem "wxx.com/go-leetcode/bag_problem"
 )
 
 func TestCanPartition(t *testing.T) {

@@ -14,7 +14,7 @@ package bagproblem
 面值看作物品，面值金额看作物品，，没见物品的价值均为1
 */
 
-func change(amount int, coins []int) int {
+func Change(amount int, coins []int) int {
 	dp := make([]int, amount+1)
 	dp[0] = 1
 	for _, coin := range coins {
