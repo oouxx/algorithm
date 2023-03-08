@@ -3,5 +3,6 @@
 .classpath
 .project
 .projectile
+.DS_Store
 
 sword_to_offer/__pycache__
