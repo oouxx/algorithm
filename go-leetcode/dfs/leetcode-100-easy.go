@@ -10,5 +10,5 @@ package dfs
  */
 //  https://leetcode.cn/problems/same-tree/
 func isSameTree(p *TreeNode, q *TreeNode) bool {
-
+	return true
 }
