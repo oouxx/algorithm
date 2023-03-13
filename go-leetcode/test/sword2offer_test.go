@@ -17,5 +17,6 @@ func TestReverseList(t *testing.T) {
 	ln := gosword2offer.ReverseList(head)
 	for ln.Next != nil {
 		fmt.Println(ln.Val)
+		ln = ln.Next
 	}
 }
