@@ -19,3 +19,14 @@ func TestRemoveElement(t *testing.T) {
 	l := array.RemoveElement([]int{2, 3, 3, 2}, 3)
 	fmt.Println(l)
 }
+
+func TestSearchInsert(t *testing.T) {
+	index := array.SearchInsert([]int{1, 3, 5, 6}, 2)
+	fmt.Println(index)
+}
+
+func TestMoveZeroes(t *testing.T) {
+	nums := []int{0, 1, 0, 3, 12}
+	array.MoveZeroes(nums)
+	fmt.Println(nums)
+}
