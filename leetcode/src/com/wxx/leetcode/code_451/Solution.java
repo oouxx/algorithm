@@ -11,7 +11,7 @@ class Solution {
         for (char c : s.toCharArray())
             frequencyForNum.put(c, frequencyForNum.getOrDefault(c, 0) + 1);
 
-        List<Character>[] frequencyBucket = new ArrayList[s.length() + 1];
+        List<Character> frequencyBucket = new ArrayList<Character>();
         for (char c : frequencyForNum.keySet()) {
             int f = frequencyForNum.get(c);
             if (frequencyBucket[f] == null) {

@@ -6,7 +6,7 @@ import java.util.List;
 class Solution {
     private static final String[] KEYS = new String[]{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};       
     public List<String> letterCombinations(String digits) {
-        List<String> combinations = new ArrayList<>();
+        List<String> combinations = new ArrayList<>(); //把中间所走过的路全部记录下来
         if (digits == null || digits.length() == 0) {
             return combinations;
         }
@@ -14,6 +14,8 @@ class Solution {
         return combinations;
     }
 
+    // DFS思想
+    // 以下用递归也可以用栈
     private void doCombination(StringBuilder prefix, List<String> combinations, final String digits) {
         if (prefix.length() == digits.length()) {
             combinations.add(prefix.toString());

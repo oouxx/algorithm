@@ -23,7 +23,7 @@ class Solution {
 
     private List<Integer>[] buildGraphic(List<String> wordList) {
         int N = wordList.size();
-        List<Integer>[] graphic = new List[N];
+        List<Integer> graphic = new ArrayList<Integer>();
         for (int i = 0; i < N; i++) {
             graphic[i] = new ArrayList<>();
             for (int j = 0; j < N; j++) {
